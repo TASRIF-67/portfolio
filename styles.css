@@ -45,22 +45,6 @@ header {
 }
 
 
-.social-links {
-    text-align: center;
-    margin-bottom: 20px; /* Additional space */
-}
-
-.social-links a {
-    color: #004d40; /* Dark green matching the footer */
-    margin: 0 10px;
-    font-size: 24px; /* Larger icons for better visibility */
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: #2e7d32; /* Slightly lighter green for hover effect */
-}
 
 section {
     padding: 20px;
@@ -75,40 +59,9 @@ section {
         height: 120px;
     }
 
-    .social-links a {
-        font-size: 20px;
-    }
+
 }
 
-
-
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    text-decoration: underline;
-    color: #8bc34a; /* Light green */
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 }
 #about-me {
     text-align: center;
@@ -144,59 +97,6 @@ section {
 }
 
 /* Example project card design */
-.project-card {
-    background-color: #ffffff; /* White background */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px auto; /* Center the card */
-    max-width: 600px; /* Limit card width */
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-card h3 {
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    font-size: 16px;
-    color: #666;
-}
-
-/* Example animation for individual project cards */
-.project-card:nth-child(odd) {
-    animation: slideInLeft 1s ease;
-}
-
-.project-card:nth-child(even) {
-    animation: slideInRight 1s ease;
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
 #research-papers {
     text-align: center;
@@ -205,83 +105,6 @@ section {
 
 #research-papers h2 {
     margin-bottom: 20px;
-}
-
-/* Example research paper card design */
-.paper-card {
-    background-color: #ffffff; /* White background */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px auto; /* Center the card */
-    max-width: 600px; /* Limit card width */
-    transition: transform 0.3s ease;
-}
-
-.paper-card:hover {
-    transform: translateY(-5px);
-}
-
-.paper-card h3 {
-    margin-bottom: 10px;
-}
-
-.paper-card p {
-    font-size: 16px;
-    color: #666;
-}
-
-/* Example animation for individual research paper cards */
-.paper-card:nth-child(odd) {
-    animation: fadeInLeft 1s ease;
-}
-
-.paper-card:nth-child(even) {
-    animation: fadeInRight 1s ease;
-}
-
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.name-container {
-    text-align: center;
-}
-
-.animated-name {
-    font-family: 'Conloas', sans-serif; /* Use your preferred font */
-    font-size: 24px; /* Adjust size as needed */
-    opacity: 0;
-    animation: fadeIn 1s forwards; /* Apply fade-in animation */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px); /* Move name up slightly */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 footer {
@@ -331,3 +154,70 @@ footer.fixed-footer {
     bottom: 0;
 }
 
+.animated-name {
+    font-size: 2.2rem;
+    animation: bounce 1s infinite alternate; /* Animate the name */
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Section Headline Animation */
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    animation: fadeInUp 1s ease; /* Animate the section headline */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Underline Effect */
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #ff6f61; /* Underline color */
+    transition: width 0.3s ease; /* Add transition for underline effect */
+}
+
+/* Hover Effect for Underline */
+section h2:hover::after {
+    width: 80px; /* Increase width on hover */
+}
+
+.social-icon {
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Ensure proper alignment */
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.social-icon:hover {
+    transform: translateY(-5px); /* Move icon up on hover */
+}
+
+.social-icon img {
+    width: 30px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border: none; /* Remove border */
+}
