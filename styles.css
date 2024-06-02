@@ -155,7 +155,7 @@ footer.fixed-footer {
 }
 
 .animated-name {
-    font-size: 2.2rem;
+    font-size: 2.0rem;
     animation: bounce 1s infinite alternate; /* Animate the name */
 }
 
